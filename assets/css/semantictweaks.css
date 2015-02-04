@@ -1,0 +1,51 @@
+.ui.grid {
+  	margin-right: 0.75%; /* prevents last column on dashboard reports from being cut off */
+	margin-top: -30px;
+}
+
+.ui.page.grid {
+	margin-top: 0%;
+}
+
+.ui.table.nowrap th,
+.ui.table.nowrap td {
+	white-space: nowrap;
+}
+
+html, body, .container {
+	height: 92%;
+}
+
+.ui.grid {
+	height: 100%;
+}
+
+.ui.grid > .column {
+	height: 100%;
+}
+
+.ui.horizontal.menu {
+	min-height: 88px;
+	background-color: #ddd;
+}
+
+.ui.horizontal.menu > .active.item {
+	background-color: #eee;
+}
+
+.ui.menu > .right.menu {
+	float: none;
+	background-color: #eee;
+}
+
+.ui.menu > .right.menu > .ui.dropdown .menu {
+	background-color: #eee;
+}
+
+.ui.dropdown {
+	min-width: 175px;
+}
+
+.ui.dropdown > .dropdown.icon {
+	float: right;
+}

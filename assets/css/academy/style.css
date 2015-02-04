@@ -1,0 +1,123 @@
+body {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	line-height: normal;
+	background-color:#001849;
+	margin: 0 0 0 0;
+	}
+
+.footer {position:absolute; bottom:0; bord:1px solid #ffffff;}
+
+img { display: block; }
+
+.text {
+	width:473px;
+	min-height:300px;
+	}
+.text li {margin: 0 0 0 1em;}
+
+#header {
+	position:absolute; 
+	left:90px;
+	}
+
+.board { float:left; 
+		width:100%; }
+.board p {margin:9px;}
+.boardimage { float:left;
+			clear:both;
+			margin:10px 10px 10px 10px;}
+
+#uppermenu { position:absolute; left:20px; top: 229px;}
+#lowermenu { position:relative; 
+			left:20px; 
+			top:485px; 
+			display:block; width:112px;
+			}
+
+	
+.menu_box {
+	position:absolute; left:20px; top: 237px;
+	border-left: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background-color:#164F98;}
+
+#menu li {
+	width:110px;
+	list-style:none; 
+	color:#FFFFFF; 
+	line-height:13px;
+	font:.8em, Geneva, Arial, Helvetica, sans-serif; 
+	line-height:3em;
+	margin: 0 0 0 -2.5em;
+	font: Geneva, Arial, Helvetica, sans-serif
+	}
+	
+hr { height:2px; 
+	color:#FFFFFF; }
+
+.nav {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	line-height: 30px;
+	font-weight: normal;
+	text-transform: none;
+	font-variant: normal;
+	text-decoration: none;
+	}
+
+p {
+	font-size: .88em;
+	}
+
+h1 {
+	font-size:1.1em;
+	}
+
+h2 {
+	font-size:.95em;
+	}
+	
+#content {
+	border-left: 1px solid #FFFFFF;
+	border-right:1px solid #FFFFFF;
+	position:absolute; 
+	top:201px; 
+	left:133px; 
+	background-color: #437EC7;
+	width:503px;
+	}
+	
+#content li {font-size:13px;}
+
+.image {float: right; margin: 0 0 20px 20px; text-align: center;}
+.otherway, .left {float: left; margin: 0 40px 0 0; clear:left;}
+.full {float: none; width: 540px; margin: 0;}
+.small {width: 100px;}
+.portrait {width: 150px;}
+.third {width: 180px;}
+.quarter {width: 135px;}
+
+#content img {clear:both;}
+.spacer {float:left; height:100%;}
+#content .text{float:left; margin: 7px 15px 12px 15px;}
+
+A:link {text-decoration: underline; color: #FFFFFF; }
+A:visited {text-decoration: underline; color: #FFFFFF; }
+A:active {text-decoration: underline; color: #BBDCF4; }
+A:hover {text-decoration: underline; color: #BBDCF4; }
+
+A.anav:link {text-decoration: none; color: #FFFFFF;}
+A.anav:visited {text-decoration: none; color: #FFFFFF;}
+A.anav:active {text-decoration: none;color: #BBDCF4;}
+A.anav:hover {text-decoration: none; color: #BBDCF4;}
+
+
+.error {
+	padding-left: 5px;
+}
+
+.required, .error
+{
+	color: #990000;
+	font-weight:bold;
+}

@@ -1,0 +1,67 @@
+#menu li {
+	list-style:none; 
+	color:#333; 
+	line-height:17px;
+	font:1em, Georgia, "Times New Roman", Times, serif; 
+	text-align:left;
+	line-height:2;
+	}
+
+#main p {
+	text-align: left; 
+	line-height: 1.8em;
+	margin: 0 0 1em;
+}
+
+#main a:link {color:#2D6DC9; text-decoration:underline;}
+#main a:visited {color:#006699; text-decoration:underline;}
+#main a:hover {color:#0099FF; text-decoration:underline;}
+#main a:active {color:#0066CC; text-decoration:underline;}
+
+#menubox a:link {color:#FFFFFF; text-decoration:none;}
+#menubox a:visited {color:#FFFFFF; text-decoration:none;}
+#menubox a:hover {color:#FFFFFF; text-decoration:underline;}
+#menubox a:active {color:#FFFFFF; text-decoration:underline;}
+
+#current a:link {color:#FFFFFF; text-decoration:underline;}
+#current a:visited {color:#FFFFFF; text-decoration:underline;}
+#current a:hover {color:#FFFFFF; text-decoration:underline;}
+#current a:active {color:#FFFFFF; text-decoration:underline;}
+
+h1 {
+	font: bold 1.2em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .75em;
+}
+
+h4 {
+	font: bold 1.0em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+	color:#0066CC;
+}
+h2 {
+	font: bold 1.1em Georgia, "Times New Roman", serif; 
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+}
+
+
+h3 {
+	font: bold 1.0em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .75em;
+}
+
+#dynamic a {
+	font: bold 1.0em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+	color:#0066CC;
+}
+
+.required, .error
+{
+	color: #990000;
+	font-weight:bold;
+}

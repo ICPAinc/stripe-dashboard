@@ -1,0 +1,195 @@
+* {margin: 0; padding: 0;}
+body {
+	font: 0.85em Verdana, sans-serif; 
+	color: #333; 
+	background: #FFF;
+}
+
+img {display: block}
+
+a img {
+	border:none; 
+	margin:0px;
+	padding:0px;
+}
+
+.column {float:left;}
+
+#header {
+	/* background-color:#7FA5D7; */
+	background-image: url('/assets/images/header-background.gif');
+	background-repeat: repeat-x;
+	margin:0 6px 0 0; 
+	/* border-bottom: 2px solid #3C517B; */
+	padding: 0px;
+	height: 110px;
+}
+#sidebar {position:absolute; top:5px; left:-6px;}
+#floatingPicture {margin:5px 5px -47px 12px;}
+#ICPALogo {margin:5px 5px 5px 12px;}
+
+#menubox {
+	background-color:#205289;
+	margin:116px 5px 0 12px;
+	width:158px;
+	padding: 5px;
+}
+
+#menu {
+	background-color:#205289; 
+	padding:10px; 
+	border: 1px solid #FFFFFF; 
+}
+	
+#menu li {
+	list-style:none; 
+	color:#FFFFFF; 
+	line-height:17px;
+	font:1.1em, Georgia, "Times New Roman", Times, serif; 
+	text-align:left;
+	line-height:2;
+	}
+
+#search {margin:5px 5px 0 12px; }
+
+.quote {
+	color:#666666;
+	font-style:italic;
+}
+
+#main {
+	font-size: 0.88em;
+	width:800px;
+	padding: .75em 1em .5em 175px;
+	min-height: 580px;
+}
+
+#main p {
+	text-align: left; 
+	line-height: 1.8em;
+	margin: 0 0 1em;
+}
+
+#content{
+	width:600px;
+	height:inherit;
+	margin: 0 .5em 0 .5em;
+}
+
+#state_content{
+	width:390px;
+	height:inherit;
+	margin: 0 .5em 0 .5em;
+}
+
+#schedule{
+	width:750px;
+	height:inherit;
+	margin: 0 .5em 0 .5em;
+}
+
+#content ul {margin: 0 0 1.5em;}
+#content ol {margin: 0 0 1.5em 1.5em;}
+#content li{
+	margin:0 0 0 1.5em;
+	line-height:1.5;
+	}
+
+.image {float: right; margin: 0 0 20px 20px; text-align: center;}
+.otherway, .left {float: left; margin: 0 40px 0 0; clear:left;}
+.full {float: none; width: 540px; margin: 0;}
+.small {width: 100px;}
+.portrait {width: 150px;}
+.third {width: 180px;}
+.quarter {width: 135px;}
+
+h4 {
+	font: bold 1.0em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+	color:#0066CC;
+}
+h2 {
+	font: bold 1.1em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+}
+h3 {
+	font: bold 1.0em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .75em;
+}
+
+.sidebar {
+	font: bold 1.5em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+	color:#0066CC;
+	text-align:center;
+}
+
+.sidebar a:link {color:#0066CC; text-decoration:underline;}
+.sidebar a:visited {color:#0066CC; text-decoration:underline;}
+.sidebar a:hover {color:#0066CC; text-decoration:underline;}
+.sidebar a:active {color:#0066CC; text-decoration:none;}
+
+.shiny {
+	font: bold 1.2em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 0 0 .5em;
+	color:#0066CC;
+	text-align:center;
+}
+
+.FAQ {
+	font: bold 1em Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: .5px;
+	color:#0066CC;
+}
+
+.shiny a:link {color:#0066CC; text-decoration:underline;}
+.shiny a:visited {color:#0066CC; text-decoration:underline;}
+.shiny a:hover {color:#0066CC; text-decoration:underline;}
+.shiny a:active {color:#0066CC; text-decoration:none;}
+
+#top {padding: .5em .9em 0 .7em;}
+
+.item {	border-top: 1px solid #A6B2CA; padding: 1.5em .9em 0 .7em; margin-top: 0.75em;}
+
+.item img {float:left; margin:4px 6px 0 6px;}
+
+.seminar {	border-top: 1px solid #A6B2CA; padding: 0 .2em 0 .2em;}
+
+#location { float:left; margin:0px 45px 0 6px;}
+
+#advertisements {
+	float:left;
+	text-align:center;
+	padding:9px;
+	width:165px;
+	}
+
+.speaker_schedule { min-height:220px;}
+
+#length {float:left;}
+
+#footer {width:100%; border: 1px solid #3C517B; border-width: 1px 0; margin-bottom: .5em; font-size: 1em; background-color:#7FA5D7; text-align:center; color:#000066;}
+#footer a:link {color:#000066; text-decoration:none; }
+#footer a:visited {color:#000066; text-decoration:none;}
+#footer a:hover {color:#FFFFFF; text-decoration:underline;}
+#footer a:active {color:#000066; text-decoration:none;}
+
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix {display: inline-table;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+button {
+	padding: 2px 6px 3px;
+}
+
+.error {
+	padding-left: 5px;
+}
