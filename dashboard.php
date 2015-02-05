@@ -337,11 +337,11 @@ if(isset($_SESSION['loggedin'])) {
                                 $succ = true;
                                 $charge = "";
                                 $stripe_charge_id = "";
-                                // new code FROM HERE
-                                $res_test = mysql_query("SELECT * FROM charges WHERE card_id='".intval($card_id)."' AND charge_id='".mysql_real_escape_string($row['charge_id'])."' AND (".$now." - created) < 43200 LIMIT 1");
+                                // new code, FROM HERE
+                                $res_test = mysql_query("SELECT * FROM charges WHERE card_id='".intval($card_id)."' AND charge_id='".mysql_real_escape_string($row['charge_id']); // ."' AND (".$now." - created) < 43200 LIMIT 1"); // Append query with this to allow re-charge attempts after 12 hours
                                 if($res_test && mysql_num_rows($res_test) > 0) {
                                     $succ = false;
-                                    $error = "This charge already attempted on this card today."; // TO HERE
+                                    $error = "This charge already attempted on this card."; // TO HERE, prevents duplicate charge attempts
                                 } else {
                                     try {
                                         Setup::stripeKey($row['stripe_account']);
