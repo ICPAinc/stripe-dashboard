@@ -1193,8 +1193,8 @@ if(isset($_SESSION['loggedin'])) {
         			$or = array();
         			$meta = unserialize($row['data']);
         			if(count($out) == 0) {
-        				$oh = array('Date','FirstName','LastName','Email','StripeAccount','StripeCustomerID','StripeCardID','StripeCardBrand','StripeCardLastFour','ExpMonth','ExpYear','Form');
-        				// added StripeAccount
+        				$oh = array('Date','FirstName','LastName','Email','StripeAccount','StripeCustomerID','StripeCardID','StripeCardBrand','StripeCardLastFour','ExpMonth','ExpYear','Source','Form');
+        				// added StripeAccount, Source (which is actually 'tag'; Form is 'source')
         				$out[] = $oh;
         			}
         			$or[] = date('m/d/Y', intval($row['date']));
@@ -1209,6 +1209,8 @@ if(isset($_SESSION['loggedin'])) {
         			$or[] = sprintf('%04d',$row['last4']);
         			$or[] = sprintf('%02d', $row['exp_month']);
         			$or[] = sprintf('%04d',$row['exp_year']);
+                    $or[] = $row['tag'];
+                    // added tag
         			$or[] = $row['source'];
         			$out[] = $or;
         		}
@@ -1294,7 +1296,7 @@ if(isset($_SESSION['loggedin'])) {
         			}
         			echo "<tr>\n";
         			foreach($r as $c) {
-        				echo "<td>".$c."</td>\n";
+        				echo "<td>".nl2br($c)."</td>\n"; // added nl2br function to show inputted line breaks
         			}
         			echo "</tr>\n";
         			if(!$th) {
