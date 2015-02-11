@@ -8,6 +8,7 @@ $config['button label'] = 'Submit';
 $config['tag'] = 'pbrn';
 $config['action'] = 'create';
 $config['stripe account'] = 'icpa';
+//$config['email_to'] = ''; // set if you need to override default notification email in lib/setup.php
 
 Form::header();
 ?>
@@ -40,7 +41,7 @@ Form::section('contactinfo');
                                   Module I- DC - $329</option>
                                   <option value=" Research PBRN Module II - DC - $329"> Research PBRN
                                   Module II- DC - $329</option>
-                                  <option value=" Research PBRN Module I & II - DC - $658"> Research PBRN Module I& II- DC - $658</option>
+                                  <option value=" Research PBRN Module I &amp; II - DC - $658"> Research PBRN Module I &amp; II- DC - $658</option>
                           
                               </select>                                </h2>							    </td>
 							</tr>

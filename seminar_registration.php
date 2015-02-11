@@ -8,6 +8,7 @@ $config['button label'] = 'Register';
 $config['tag'] = 'seminar';
 $config['action'] = 'create';
 $config['stripe account'] = 'icpa';
+//$config['email_to'] = ''; // set if you need to override default notification email in lib/setup.php
 
 Form::header();
 ?>

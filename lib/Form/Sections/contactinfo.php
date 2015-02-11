@@ -5,6 +5,14 @@ if (!debug_backtrace()) {
 }
 // $param1 = optional text about Cell Phone requirement or usage
 // $param2 = optional 'required' toggle for Cell Phone
+
+$first = '';
+$last = '';
+if(isset($_GET['first']) && isset($_GET['last'])) {
+    $first = $_GET['first'];
+    $last = $_GET['last'];
+}
+
 ?>
 
     	<tr>
@@ -12,11 +20,11 @@ if (!debug_backtrace()) {
         </tr>
         <tr>
             <td width="180"><span class="required">*</span> First Name:</td>
-            <td width="auto"><input size="35" name="FirstName" type="text" required></td>
+            <td width="auto"><input size="35" name="FirstName" value="<?php echo $first; ?>" type="text" required></td>
         </tr>
         <tr>
             <td><span class="required">*</span> Last Name:</td>
-            <td><input size="35" name="LastName" type="text" required></td>
+            <td><input size="35" name="LastName" value="<?php echo $last; ?>" type="text" required></td>
         </tr>
         <tr>
             <td>Suffix:</td>

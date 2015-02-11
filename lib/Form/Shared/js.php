@@ -28,8 +28,13 @@ if (!debug_backtrace()) {
     }
       
     function postForm() {
+        <?php
+            // Removes any existing queries in URL string before posting Stripe form with xhr query
+            $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+            $clean_uri = $uri_parts[0];
+        ?>
         $.blockUI({message: '<h1>Submitting...</h1>'});
-        $.post( "<?php echo $_SERVER['REQUEST_URI']; ?>?xhr=true", $( "#form" ).serialize() ).done(function(data) {
+        $.post( "<?php echo $clean_uri; ?>?xhr=true", $( "#form" ).serialize() ).done(function(data) {
             if (data == 'success') {
                 $('#form').hide();
                 $('#success').show();

@@ -8,6 +8,7 @@ $config['button label'] = 'Register for Exam';
 $config['tag'] = 'exam';
 $config['action'] = 'create';
 $config['stripe account'] = 'academy';
+//$config['email_to'] = ''; // set if you need to override default notification email in lib/setup.php
 
 Form::header();
 ?>
