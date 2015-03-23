@@ -1252,18 +1252,20 @@ if(isset($_SESSION['loggedin'])) {
         	if($res && mysql_num_rows($res) > 0) {
         		$table = true;
         		$th = false;
-        		$out = array();
+                $out = array();
+                $outr = array(); // used for vertical stacked form entries below
 ?>
 <table class="ui celled table segment nowrap" style="margin: 10px;"> <!--added celled-->
 <?php
         		while($row = mysql_fetch_assoc($res)) {
-        			$or = array();
+                    $or = array();
         			$meta = unserialize($row['data']);
         			if(count($out) == 0) {
         				$oh = array('Date','FirstName','LastName','Email','StripeAccount','StripeCustomerID','StripeCardID','StripeCardBrand','StripeCardLastFour','ExpMonth','ExpYear');
         				// added StripeAccount
         				if($sourceset) {
-        					$out[] = array_merge($oh, array_keys($meta));
+                            $oh = array_merge($oh, array_keys($meta));
+        					$out[] = $oh;
         				} else {
                             $oh[] = 'Form';
         					$out[] = $oh;
@@ -1284,19 +1286,21 @@ if(isset($_SESSION['loggedin'])) {
         			$or[] = sprintf('%04d',$row['exp_year']);
         			//added exp_month & exp_year
         			if($sourceset) {
-        				$out[] = array_merge($or, array_values($meta));
+                        $or = array_merge($or, array_values($meta));
+        				$out[] = $or;
+                        $outr[] = $or; // used for vertical stacked form entries below
         			} else {
                         $or[] = $row['source'];
         				$out[] = $or;
         			}
         		}
-        		foreach($out as $r) {
+        		foreach($out as $key => $r) {
         			if(!$th) {
         				echo "<thead>\n";
         			}
         			echo "<tr>\n";
         			foreach($r as $c) {
-        				echo "<td>".nl2br($c)."</td>\n"; // added nl2br function to show inputted line breaks
+        				echo "<td>".(($sourceset and ($key > 0)) ? '<a href="#row'.$key.'" style="color: inherit; text-decoration: inherit;">'.nl2br($c).'</a>' : nl2br($c))."</td>\n"; // added nl2br function to show inputted line breaks
         			}
         			echo "</tr>\n";
         			if(!$th) {
@@ -1305,6 +1309,18 @@ if(isset($_SESSION['loggedin'])) {
         			}
         		}
         		echo "</tbody>\n</table>\n";
+
+                // added the following vertical stacked form entries
+                if($sourceset) {
+                    foreach ($outr as $row => $r) {
+                        echo "<table id='row".(string)($row + 1)."' class='ui celled table segment' style='margin: 10px; width: 50%;'>\n";
+                        echo "<tbody>\n";
+                        foreach($oh as $key => $field) {
+                            echo "<tr><td width='225px'><strong>".$field."</strong></td><td>".nl2br($r[$key])."</td></tr>\n";
+                        }
+                        echo "</tbody>\n</table>\n";
+                    }
+                }
         	}
         }
         if(!$table) {
