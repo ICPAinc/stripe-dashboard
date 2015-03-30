@@ -2,12 +2,12 @@
 include_once(dirname(__FILE__).'/lib/Form.php');
 
 
-$config['template'] = 'ICPA';
-$config['title'] = 'ICPA Credit Card Submission';
-$config['button label'] = 'Submit';
-$config['tag'] = 'other';
+$config['template'] = 'Academy';
+$config['title'] = 'ICPA Exam Extension';
+$config['button label'] = 'Continue';
+$config['tag'] = 'exam';
 $config['action'] = 'create';
-$config['stripe account'] = 'icpa';
+$config['stripe account'] = 'academy';
 //$config['email_to'] = ''; // set if you need to override default notification email in lib/setup.php
 
 $first = '';
@@ -20,7 +20,8 @@ if(isset($_GET['first']) && isset($_GET['last'])) {
 Form::header();
 ?>
 <div id="top">
-    <h1>Submit a New Credit Card to ICPA Inc</h1>
+    <h1>Certification Exam Extension Payment</h1>
+    <p>The Academy will allow you to have a 30 day extension on your Certification Exam. Please submit your name and payment below. There is a $100 exam extension fee.</p>
     <br/>
     <p><span class="required">*</span> - Required information</p>
     <h3>Personal Information </h3>
@@ -34,20 +35,7 @@ Form::header();
 	        <td><input type="text" size="35" name="LastName" value="<?php echo $last; ?>" required /></td>
 		</tr>
         <tr>
-            <td><span class="required">* </span>Reason:</td>
-            <td>
-                <select name="Reason" required>
-                    <option selected="selected"></option>
-                    <option value="Update Membership Payment">Update Membership Payment</option>
-                    <option value="Update Seminar Payment">Update Seminar Payment</option>
-                    <option value="CE Fee">Continuing Education Fee</option>
-                    <option value="PBRN">PBRN Payment</option>
-                    <option value="Other">Other</option>
-                </select>
-            </td>
-        </tr>
-		<tr>
-			<td>Reason if Other, or Additional Info:</td>
+			<td>Additional Info (optional):</td>
 			<td><input type="text" size="35" name="Memo" /></td>
 		</tr>
     </table>

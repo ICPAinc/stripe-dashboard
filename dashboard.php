@@ -1316,7 +1316,11 @@ if(isset($_SESSION['loggedin'])) {
                         echo "<table id='row".(string)($row + 1)."' class='ui celled table segment' style='margin: 10px; width: 50%;'>\n";
                         echo "<tbody>\n";
                         foreach($oh as $key => $field) {
-                            echo "<tr><td width='225px'><strong>".$field."</strong></td><td>".nl2br($r[$key])."</td></tr>\n";
+                            if(isset($r[$key])) {
+                                echo "<tr><td width='225px'><strong>".$field."</strong></td><td>".nl2br($r[$key])."</td></tr>\n";
+                            } else {
+                                echo "<tr><td width='225px'><strong>".$field."</strong></td><td></td></tr>\n";
+                            }
                         }
                         echo "</tbody>\n</table>\n";
                     }

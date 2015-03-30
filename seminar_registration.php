@@ -262,34 +262,36 @@ Form::section('autorenew');
 			              <tr>
 								<td height="25"><span class="required">* </span>Seminar Location:</td>
 								<td><select name="SeminarLocation" required >
-								  <option></option>
-								  <option value="Atlanta">Atlanta, GA</option>
-						           <option value="Boston">Boston, MA</option>
-                                   <option value="Boise">Boise, ID</option>
-								   <option value="Calgary, AB">Calgary, AB</option>
-								  <option value="Chicago">Chicago, IL</option>
-                                  <option value="Columbus">Columbus, OH</option>
-                                  <option value="Daytona">Daytona, FL</option>
-                                  <option value="Denver">Denver, CO</option>
-                                  <option value="Ft. Lauderdale">Ft. Lauderdale, FL</option>
-                                  <option value="Los Angeles">Los Angeles, CA</option>
-								  <option value="Long Island">Long Island, NY</option>
-                                  <option value="Pittsburgh">Pittsburgh, PA</option>
-                                  <option value="Philadelphia">Philadelphia, PA</option>
-                                  <option value="Ottawa">Ottawa, ON</option>
-                                  <option value="Overland Park">Overland Park, KS</option>
-                                  <option value="Portland">Portland, OR</option>
-                                  <option value="San Diego">San Diego, CA</option>
-								   <option value="San Francisco">San Francisco, CA</option>
-                                   <option value="Seattle">Seattle, WA</option>
-                                   <option value="Spartanburg">Spartanburg, SC</option>
-								  <option value="St. Louis">St. Louis, MO</option>
-								  <option value="Syracuse, NY">Syracuse, NY</option>
-								  <option value="Toronto">Toronto, ON</option>
-								  <option value="Trois Rivières">Trois, Rivieres, QC</option> 
-                                  <option value="Vancouver">Vancouver, BC</option>
-                                  <option value="Virginia">Virginia</option>
-                              </select></td>
+                        <option></option>
+                        <option value="Atlanta">Atlanta, GA</option>
+                        <option value="Barcelona">Barcelona, Spain</option>
+                        <option value="Boston">Boston, MA</option>
+                        <option value="Boise">Boise, ID</option>
+                        <option value="Calgary">Calgary, AB</option>
+                        <option value="Chicago">Chicago, IL</option>
+                        <option value="Columbus">Columbus, OH</option>
+                        <option value="Daytona">Daytona, FL</option>
+                        <option value="Denver">Denver, CO</option>
+                        <option value="Ft. Lauderdale">Ft. Lauderdale, FL</option>
+                        <option value="Houston">Houston, TX</option>
+                        <option value="London">London, England</option>
+                        <option value="Long Island">Long Island, NY</option>
+                        <option value="Los Angeles">Los Angeles, CA</option>
+                        <option value="Pittsburgh">Pittsburgh, PA</option>
+                        <option value="Philadelphia">Philadelphia, PA</option>
+                        <option value="Ottawa">Ottawa, ON</option>
+                        <option value="Overland Park">Overland Park, KS</option>
+                        <option value="Portland">Portland, OR</option>
+                        <option value="San Diego">San Diego, CA</option>
+                        <option value="San Francisco">San Francisco, CA</option>
+                        <option value="Seattle">Seattle, WA</option>
+                        <option value="Spartanburg">Spartanburg, SC</option>
+                        <option value="St. Louis">St. Louis, MO</option>
+                        <option value="Syracuse">Syracuse, NY</option>
+                        <option value="Toronto">Toronto, ON</option>
+                        <option value="Trois Rivières">Trois, Rivieres, QC</option> 
+                        <option value="Vancouver">Vancouver, BC</option>
+                    </select></td>
 						  </tr>
 							<tr>
 								<td><span class="required">* </span>Seminar Month: </td>
@@ -316,7 +318,7 @@ Form::section('autorenew');
 							    <td><select name="SeminarCost" required>
 							      <option></option>
 							      <option value="DC Member - $329">DC - ICPA Member - $329</option>
-							      <option value="DC & Student Non-Member - $379">DC & Student Non-Member - $379</option>
+							      <option value="DC &amp; Student Non-Member - $379">DC &amp; Student Non-Member - $379</option>
 							   <option value="DC First Year Member/Non-Practicing DC/Non-Practicing/Faculty Member - $279">DC - ICPA First Year DC Member/Non-Practicing DC/Faculty Member - $279</option>
 					              <option value="Student Member - $279">Student - ICPA Student Member - $279</option>
 							      <option value="DC PIF - $4,185">Entire Series - DC Member - Save 32% - $4,185</option>
@@ -354,7 +356,6 @@ Form::section('autorenew');
                           </tr>
                             <tr>
                               <td><p><span class="required">* </span>Will you be requesting  CE Hours?</p>
-                                <p> <em>**Please note there is a $35 application fee payable onsite.</em></p></td>
                               <td><select name="Requesting CE Hours" required >
                                 <option></option>
                                 <option value="No">No</option>
@@ -362,8 +363,13 @@ Form::section('autorenew');
                               </select></td>
                             </tr>
                             <tr>
+                              <td colspan="2">
+                                <p><em>**Please note there is a $35 application fee for course completion certificates. This fee will be processed after the seminar and upon attendance verification.</em></p></td>
+                              </td>
+                            </tr>
+                            <tr>
                               <td>If yes, which state/province:</td>
-                              <td><select name="SeminarLocation2" >
+                              <td><select name="CE State" >
                                 <option></option>
                                 <option value="AB">AB</option>
                                 <option value="AL">AL</option>
