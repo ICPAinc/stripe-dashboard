@@ -89,15 +89,15 @@ function shToggle(content) {
                 <td><div align="center">First/Second Year of Practice</div></td>
                 <td><div align="center">Total Cost: $3,435<br />
                   16 modules @ $229.00 per module.<br />
-                  -$279 for 1 complimentary module.</div></td>
-                <td><div align="center">$229 per module for 16 modules. This   will be automatically deducted the Monday before each  module.</div></td>
+                  -$229 for 1 complimentary module.</div></td>
+                <td><div align="center">$229 per module for 14 modules. $279 for the two PBRN modules. This   will be automatically deducted the Monday before each  module.</div></td>
               </tr>
               <tr>
                 <td height="26"><div align="center">Faculty D.C. </div></td>
                 <td><div align="center">Total Cost: $3,435<br />
                   16 modules @ $229.00 per module.<br />
                   -$229 for 1 complimentary module.</div></td>
-                <td><div align="center">$229 per module for 16 modules. This   will be automatically deducted the Monday before each  module.</div></td>
+                <td><div align="center">$229 per module for 14 modules. $279 for the two PBRN modules. This   will be automatically deducted the Monday before each  module.</div></td>
               </tr>
               <tr>
                 <td height="26"><div align="center">Non-Practicing D.C.</div></td>
@@ -106,7 +106,7 @@ function shToggle(content) {
                   -$229 for 1 complimentary module.</div></td>
                 <td><div align="center">
                   <div align="center">
-                    <div align="center">$229 per module for 16 modules. This   will be automatically deducted the Monday before each  module.</div>
+                    <div align="center">$229 per module for 14 modules. $279 for the two PBRN modules. This   will be automatically deducted the Monday before each  module.</div>
                   </div>
                 </div></td>
               </tr>
@@ -119,17 +119,17 @@ function shToggle(content) {
                   -$229 for 1 complimentary module.</div></td>
                 <td><div align="center">
                   <div align="center">
-                    <div align="center">$229 per module for 16 modules. This   will be automatically deducted the Monday before each  module.</div>
+                    <div align="center">$229 per module for 14 modules. $279 for the two PBRN modules. This   will be automatically deducted the Monday before each  module.</div>
                   </div>
                 </div></td>
               </tr>
               <tr>
                 <td height="26"><div align="center">Student</div></td>
-                <td><div align="center">Total Cost: $3, 435<br />
+                <td><div align="center">Total Cost: $3,435<br />
                   16 modules @ $229.00 per module.<br />
                   -$229 for 1 complimentary module.</div></td>
                 <td><div align="center">
-                  <div align="center">$229 per module for 16 modules. This   will be automatically deducted the Monday before each  module.</div>
+                  <div align="center">$229 per module for 14 modules. $279 for the two PBRN modules. This   will be automatically deducted the Monday before each  module.</div>
                 </div></td>
               </tr>
             </table>
@@ -199,9 +199,11 @@ Form::section('contactinfo','Your cell phone will be used only for an emergency 
 							    <option value="DC Married Couple Membership - $329">No, join as a Married D.C. Couple - $329</option>
 							    <option value="Student Membership - $129">No, join as a Student - $129</option>
 							    
-                                <option value="First Year DC Membership - $179">No, join as a First-Year D.C. - $179</option>
-                					    <option value="Associate DC - $179">No, join as an Associate DC (other DC in office must be an ICPA member - $179</option>                <option value="First Year DC Married Couple - $229">No, join as a  Married Couple First-Year D.C. - $229</option>
+                                <option value="First/Second Year DC Membership - $179">No, join as a First/Second-Year D.C. - $179</option>
+                					    <option value="Associate DC - $179">No, join as an Associate DC (other DC in office must be an ICPA member) - $179</option>                
+                              <option value="First Year DC Married Couple - $229">No, join as a  Married Couple First-Year D.C. - $229</option>
 							    <option value="Non-Practicing DC Membership - $179">No, join as a Non-Practicing D.C. - $179</option>
+                                <option value="Faculty DC Membership - $179"> No, join as a Faculty D.C. - $179</option>
                                 </select></td>
                             </tr>
                             <tr>
@@ -259,9 +261,32 @@ Form::section('autorenew');
 							<tr>
 								<td colspan="2"><hr /><br /></td>
 							</tr>
-			              <tr>
-								<td height="25"><span class="required">* </span>Seminar Location:</td>
-								<td><select name="SeminarLocation" required >
+                    <tr>
+                <td height="25"><span class="required">* </span>Course (or Entire Series):</td>
+                <td><select name="SeminarCourse" required >
+                        <option></option>
+                        <option value="Entire Series">Entire Series (Auto-Payment or Pay in Full)</option>
+                        <option value="Ohm - Perinatal Care">Perinatal Care: Webster Certification</option>
+                        <option value="Rossi - The Essentials Of...">The Essentials Of Chiropractic Care For Children</option>
+                        <option value="Marini - Neuroimmunology">Neuroimmunology: Patterns of Interference</option>
+                        <option value="Castellucci - Full-spine...">Full-spine Segmental Evaluation and Adjusting</option>
+                        <option value="Carrino - Bridging the Gap...">Bridging the Gap Between Crisis Care and Optimal Function</option>
+                        <option value="Thompson - Techniques">Techniques: Thompson and Logan</option>
+                        <option value="Alcantara - Research">Research: Evidence Informed Practice</option>
+                        <option value="Minardi - Neurology of the...">Neurology of the VSC &amp; Thompson Technique 2</option>
+                        <option value="Rosen - Eval &amp; Adjusting...">Eval &amp; Adjusting Protocols: Correcting Primary Spinal and Cranial Subluxation Patterns</option>
+                        <option value="Doyle - Holistic Nutrition">Holistic Nutrition</option>
+                        <option value="Anderson-P. - Transforming...">Transforming Practical Experience to Family Practice</option>
+                        <option value="Hall - Developmental Neuro...">Developmental Neurobiology</option>
+                        <option value="Rubin - Pediatric Alphabet Soup">Pediatric Alphabet Soup: ASD, ADHD, LD, PDD, PSD...what they mean &amp; how to care for them</option>
+                        <option value="Kevorkian - Mastery of Chiro...">Mastery of Chiropractic Principles and Practice</option>
+                        <option value="Research PBRN I">Research PBRN I</option>
+                        <option value="Research PBRN II">Research PBRN II</option>
+                    </select></td>
+              </tr>
+                    <tr>
+                <td height="25"><span class="required">* </span>Seminar Location:</td>
+                <td><select name="SeminarLocation" required >
                         <option></option>
                         <option value="Atlanta">Atlanta, GA</option>
                         <option value="Barcelona">Barcelona, Spain</option>
@@ -289,10 +314,10 @@ Form::section('autorenew');
                         <option value="St. Louis">St. Louis, MO</option>
                         <option value="Syracuse">Syracuse, NY</option>
                         <option value="Toronto">Toronto, ON</option>
-                        <option value="Trois Rivières">Trois, Rivieres, QC</option> 
+                        <option value="Trois Rivières">Trois Rivières, QC</option> 
                         <option value="Vancouver">Vancouver, BC</option>
                     </select></td>
-						  </tr>
+              </tr>
 							<tr>
 								<td><span class="required">* </span>Seminar Month: </td>
 							  <td><select name="SeminarMonth" required > 
@@ -319,19 +344,21 @@ Form::section('autorenew');
 							      <option></option>
 							      <option value="DC Member - $329">DC - ICPA Member - $329</option>
 							      <option value="DC &amp; Student Non-Member - $379">DC &amp; Student Non-Member - $379</option>
-							   <option value="DC First Year Member/Non-Practicing DC/Non-Practicing/Faculty Member - $279">DC - ICPA First Year DC Member/Non-Practicing DC/Faculty Member - $279</option>
+							   <option value="DC - ICPA 1st/2nd Year DC Member/Non-Practicing DC/Faculty - $279">DC - ICPA 1st/2nd Year DC Member/Non-Practicing DC/Faculty - $279</option>
 					              <option value="Student Member - $279">Student - ICPA Student Member - $279</option>
-							      <option value="DC PIF - $4,185">Entire Series - DC Member - Save 32% - $4,185</option>
-							      <option value="First Year DC PIF - $3,435">Entire Series - DC First-Year Member - Save 44% - $3, 435</option>
-							      <option value="Student PIF - $3,435">Entire Series - Student Member - Save 56% - $3, 435</option>
+							      <option value="DC PIF - $4,185">Entire Series - DC Member - Save 20% - $4,185</option>
+                    <option value="1st/2nd Year DC PIF - $3,435">Entire Series - DC 1st/2nd Year Member - Save 23% - $3,435</option>
+                    <option value="Non-Practicing/Faculty/DC Spouse PIF - $3,435">Entire Series - Non-Practicing DC Member, Faculty, DC Spouse Member - Save 23% - $3,435</option>
+							      <option value="Student PIF - $3,435">Entire Series - Student Member - Save 23% - $3,435</option>
 							      <option value="Auto-Payment Discount - DC Member - $279 per Module">Auto-Payment Discount - DC Member - $279 per Module</option>
-							      <option value="Auto-Payment Discount - First Year DC Member - $229 per Module">Auto-Payment Discount - First Year DC Member - $229 per Module</option>
+                    <option value="Auto-Payment Discount - 1st/2nd Year DC Member - $229 per Module">Auto-Payment Discount - 1st/2nd Year DC Member - $229 per Module</option>
+                    <option value="Auto-Payment Discount - Non-Practicing DC Member, Faculty, DC Spouse - $229 per Module">Auto-Payment Discount - Non-Practicing DC Member, Faculty, DC Spouse - $229 per Module</option>
 							      <option value="Auto-Payment Discount - Student Member - $229 per Module">Auto-Payment Discount - Student Member - $229 per Module</option>
 							      <option value="Prior PIF">Previously Paid-in-Full - Current Member</option>
 							      <option value="Refresher Course - DC Member - $229">Refresher Course - DC Member - $229</option>
 					
-							      <option value=" Chiropractic Assistant">Chiropractic Assistant - $79</option>
-							      <option value=" Lay Public">Lay Public/Spouse- $79</option>
+							      <option value="Chiropractic Assistant">Chiropractic Assistant - $50</option>
+							      <option value="Lay Public">Lay Public/Spouse- $50</option>
 						        </select></td>
         					</tr>
 							<tr>
@@ -364,7 +391,7 @@ Form::section('autorenew');
                             </tr>
                             <tr>
                               <td colspan="2">
-                                <p><em>**Please note there is a $35 application fee for course completion certificates. This fee will be processed after the seminar and upon attendance verification.</em></p></td>
+                                <p><em>**Please note there is a $45 application fee for course completion certificates. This fee will be processed after the seminar and upon attendance verification.</em></p></td>
                               </td>
                             </tr>
                             <tr>

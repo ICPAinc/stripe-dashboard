@@ -102,7 +102,9 @@ class Form {
                 $notes = parse_url($_SERVER['REQUEST_URI']);
                 mysql_query("INSERT INTO entries_meta SET entry_id='".mysql_real_escape_string($entry_id)."', data='".mysql_real_escape_string(serialize($meta))."', source='".mysql_real_escape_string($notes['path'])."', title='".mysql_real_escape_string($config['title'])."', created='".$now."'", $db);
                 echo 'success';
-    			mail($email_to,$email_settings['subject']." - ".$config['title'],$email_settings['message'].$fn." ".$ln."\n".$em,$email_settings['headers']);
+                $email_subject = $email_settings['subject']." - ".$config['title'].(isset($meta['Reason']) ? " - ".$meta['Reason'] : "");
+                $email_message = $email_settings['message'].$fn." ".$ln."\n".$em."\n\nOn form:\n".mysql_real_escape_string($notes['path']).(isset($meta['Reason']) ? "\n\nReason:\n".$meta['Reason'] : "");
+                mail($email_to,$email_subject,$email_message,$email_settings['headers']);
     			// added mail function; references $email_settings in lib/setup.php
                 return;
             }
@@ -170,7 +172,9 @@ class Form {
                     $notes = parse_url($_SERVER['REQUEST_URI']);
                     mysql_query("INSERT INTO entries_meta SET entry_id='".mysql_real_escape_string($entry_id)."', data='".mysql_real_escape_string(serialize($meta))."', source='".mysql_real_escape_string($notes['path'])."', title='".mysql_real_escape_string($config['title'])."', created='".$now."'", $db);
                     echo 'success';
-    				mail($email_to,$email_settings['subject']." - ".$config['title'],$email_settings['message'].$fn." ".$ln."\n".$em,$email_settings['headers']);
+                    $email_subject = $email_settings['subject']." - ".$config['title'].(isset($meta['Reason']) ? " - ".$meta['Reason'] : "");
+                    $email_message = $email_settings['message'].$fn." ".$ln."\n".$em."\n\nOn form:\n".mysql_real_escape_string($notes['path']).(isset($meta['Reason']) ? "\n\nReason:\n".$meta['Reason'] : "");
+    				mail($email_to,$email_subject,$email_message,$email_settings['headers']);
     				// added mail function; references $email_settings in lib/setup.php
                     return;
                 } else {

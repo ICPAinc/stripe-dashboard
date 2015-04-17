@@ -1317,7 +1317,11 @@ if(isset($_SESSION['loggedin'])) {
                         echo "<tbody>\n";
                         foreach($oh as $key => $field) {
                             if(isset($r[$key])) {
-                                echo "<tr><td width='225px'><strong>".$field."</strong></td><td>".nl2br($r[$key])."</td></tr>\n";
+                                if(($field == "Requesting_CE_Hours" && $r[$key] == "Yes") or ($field == "ICPAMember" && strpos($r[$key], '$') !== FALSE)) {
+                                    echo "<tr class='positive'><td width='225px'><strong>".$field."</strong></td><td><i class='icon checkmark'></i> ".nl2br($r[$key])."</td></tr>\n";
+                                } else {
+                                    echo "<tr><td width='225px'><strong>".$field."</strong></td><td>".nl2br($r[$key])."</td></tr>\n";
+                                }
                             } else {
                                 echo "<tr><td width='225px'><strong>".$field."</strong></td><td></td></tr>\n";
                             }
